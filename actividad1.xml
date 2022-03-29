@@ -1,8 +1,9 @@
-<?xml version="1.0" enconding="UTF-8" standalone="no"?>
-<!DOCTYPE oleum_est_aurum SYSTEM oleum_est_aurum.dtd>
+<?xml version="1.0" enconding="UTF-8" standalone="yes"?>
+<!DOCTYPE oleum_est_aurum>
 <oleum_est_aurum>
 	<cliente>
 		<codigo_cliente>E1234</codigo_cliente>
+		<!--Ya que no importa el orden de los campos nombre_via, num_via,..., serán atributos-->
 		<direccion nombre_via="Calle Romero" num_via="1" 
 		localidad = "Córdoba" provincia ="Córdoba" 
 		cod_postal="14003"></direccion>
