@@ -1,0 +1,62 @@
+<?xml version="1.0" enconding="UTF-8" standalone="no"?>
+<!DOCTYPE oleum_est_aurum SYSTEM "actividad2.dtd">
+<oleum_est_aurum>
+	<cliente>
+		<codigo_cliente>E1234</codigo_cliente>
+		<!--Ya que no importa el orden de los campos nombre_via, num_via,..., serán atributos-->
+		<direccion nombre_via="Calle Romero" num_via="1" 
+		localidad = "Córdoba" provincia ="Córdoba" 
+		cod_postal="14003"></direccion>
+		<telefono>957520744</telefono>
+		<tipo_cliente>Empresa
+			<nombre_apellidos>Juan Ramírez Sánchez</nombre_apellidos>
+			<razon_social>Restaurante Pepe de la Judería</razon_social>
+			<web></web>
+			<CIF>b14978647</CIF>
+		</tipo_cliente>	
+		<factura>
+			<fecha>19/01/2022</fecha>
+			<num_factura>EMP-22-1234</num_factura>
+			<forma_pago>Efectivo</forma_pago>
+			<fecha_vencimiento>28 días</fecha_vencimiento>
+			<producto>
+				<cantidad>30</cantidad>
+				<nombre_producto>Parqueoliva Serie OrO</nombre_producto>
+				<cod_producto>PAR-SER-ORO</cod_producto>
+				<precio_unitario>12.00€</precio_unitario>
+			</producto>
+			<producto>
+				<cantidad>12</cantidad>
+				<nombre_producto>Rincón de la Subbética</nombre_producto>
+				<cod_producto>RIN-CON-SUB</cod_producto>
+				<precio_unitario>18.95€</precio_unitario>
+			</producto>
+			<producto>
+				<cantidad>10</cantidad>
+				<nombre_producto>La joya del Monte</nombre_producto>
+				<cod_producto>JOY-DEL-MON</cod_producto>
+				<precio_unitario>69.95€</precio_unitario>
+			</producto>
+			<cuantia>
+				<subtotal>1286.90</subtotal>
+				<iva>21</iva>
+				<total>1557.15</total>
+			</cuantia>
+		</factura>
+	</cliente>
+</oleum_est_aurum>
+	
+	
+
+- Fecha, usar el tipo de dato adecuado.
+- Nº factura. El número de la factura tiene la siguiente estructura: EMP para los clientes que son EMPRESA o PAR para los PARTICULARES, seguido de un guion, año (2 últimos números), un guion y código de cliente (4 números), por ejemplo: EMP-22-1234.
+- Forma de pago, sólo puede tomar los valores: Tarjeta, transferencia o efectivo. 
+- Fecha de vencimiento: 28 días.
+- Productos, para cada producto se guarda: 
+cantidad, nombre y código de producto, precio unitario. 
+El código del producto tiene la siguiente estructura "XYZ-XYZ-XYX", 
+por ejemplo: "FIT-FER-ABO".
+- "Cuantía" de la factura indicando el 
+subtotal, el iva aplicado y el total (cifras con dos decimales). 
+Por defecto la cuantía viene expresada en "euros", 
+pero puede tomar otros valores.
