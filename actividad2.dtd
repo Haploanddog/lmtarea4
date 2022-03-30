@@ -3,11 +3,11 @@
 <!ELEMENT cliente (direccion, telefono*, tipo_cliente, factura+)>
     <!ATTLIST cliente cod_cliente ID #REQUIRED>
 <!ELEMENT direccion (#PCDATA)>
-    <!ATTLIST direccion nombre_via CDDATA #REQUIRED>
-    <!ATTLIST direccion num_via CDDATA #REQUIRED>
-    <!ATTLIST direccion localidad CDDATA #REQUIRED>
-    <!ATTLIST direccion provincia CDDATA #REQUIRED>
-    <!ATTLIST direccion cod_postal CDDATA #REQUIRED>
+    <!ATTLIST direccion nombre_via CDATA #REQUIRED>
+    <!ATTLIST direccion num_via CDATA #REQUIRED>
+    <!ATTLIST direccion localidad CDATA #REQUIRED>
+    <!ATTLIST direccion provincia CDATA #REQUIRED>
+    <!ATTLIST direccion cod_postal CDATA #REQUIRED>
 <!ELEMENT telefono (#PCDATA)>
     <!ATTLIST telefono tipo_tfno (particular | direccion | rrhh | contabilidad) #REQUIRED>
 <!ELEMENT tipo_cliente (empresa(nombre_apellidos, razon_social, web?, CIF) | particular(nombre_apellidos, NIF))>
@@ -18,13 +18,3 @@
 <!ELEMENT CIF (#PCDATA)>
 <!ELEMENT NIF (#PCDATA)>
 <!ELEMENT factura(fecha, num_factura, forma_pago, fecha_vencimiento, producto, cuantia)>
-
-
-Facturas:
-- Fecha, usar el tipo de dato adecuado.
-- Nº factura. El número de la factura tiene la siguiente estructura: EMP para los clientes que son EMPRESA o PAR para los PARTICULARES, seguido de un guion, año 
-(2 últimos números), un guion y código de cliente (4 números), por ejemplo: EMP-22-1234.
-- Forma de pago, sólo puede tomar los valores: Tarjeta, transferencia o efectivo. 
-- Fecha de vencimiento: 28 días.
-- Productos, para cada producto se guarda: cantidad, nombre y código de producto, precio unitario. El código del producto tiene la siguiente estructura "XYZ-XYZ-XYX", por ejemplo: "FIT-FER-ABO".
-- "Cuantía" de la factura indicando el subtotal, el iva aplicado y el total (cifras con dos decimales). Por defecto la cuantía viene expresada en "euros", pero puede tomar otros valores.

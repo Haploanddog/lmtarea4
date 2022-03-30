@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE clientes>
+<!--Para que podamos introducir más clientes, definimos la etiqueta clientes, en la que se incluirán los diferentes clientes-->
 <clientes>
 	<!--Como el código de cliente no puede repetirse e identifica al cliente de manera unívoca, lo incluiremos como atributo-->
 	<cliente cod_cliente="E1234">		
