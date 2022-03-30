@@ -1,5 +1,5 @@
-<?xml version="1.0" enconding="UTF-8"?>
-<!ELEMENT oleum_est_aurum (cliente)>
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT clientes (cliente)>
 <!ELEMENT cliente (direccion, telefono*, tipo_cliente, factura+)>
     <!ATTLIST cliente cod_cliente ID #REQUIRED>
 <!ELEMENT direccion (#PCDATA)>

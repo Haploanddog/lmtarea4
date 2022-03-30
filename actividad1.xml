@@ -1,17 +1,17 @@
-<?xml version="1.0" enconding="UTF-8" standalone="yes"?>
-<!DOCTYPE oleum_est_aurum>
-<oleum_est_aurum>
-	<!--Como el código de cliente no puede repetirse, lo incluiremos como atributo-->
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE clientes>
+<clientes>
+	<!--Como el código de cliente no puede repetirse e identifica al cliente de manera unívoca, lo incluiremos como atributo-->
 	<cliente cod_cliente="E1234">		
-		<!--Ya que no importa el orden de los campos nombre_via, num_via,..., serán atributos-->
+		<!--Ya que no importa el orden de los campos nombre_via, num_via, etc., estos serán atributos-->
 		<direccion nombre_via="Calle Romero" num_via="1" 
-		localidad = "CÃ³rdoba" provincia ="CÃ³rdoba" 
+		localidad = "Córdoba" provincia ="Córdoba" 
 		cod_postal="14003"></direccion>
 		<telefono>957520744</telefono>
 		<tipo_cliente>
 			<empresa>
-				<nombre_apellidos>Juan RamÃ­rez SÃ¡nchez</nombre_apellidos>
-				<razon_social>Restaurante Pepe de la JuderÃ­a</razon_social>
+				<nombre_apellidos>Juan Ramírez Sánchez</nombre_apellidos>
+				<razon_social>Restaurante Pepe de la Judería</razon_social>
 				<web></web>
 				<CIF>b14978647</CIF>
 			</empresa>
@@ -20,33 +20,33 @@
 			<fecha>19/01/2022</fecha>
 			<num_factura>EMP-22-1234</num_factura>
 			<forma_pago>Efectivo</forma_pago>
-			<fecha_vencimiento>28 dÃ­as</fecha_vencimiento>
+			<fecha_vencimiento>28 días</fecha_vencimiento>
 			<producto>
 				<cantidad>30</cantidad>
 				<nombre_producto>Parqueoliva Serie OrO</nombre_producto>
 				<cod_producto>PAR-SER-ORO</cod_producto>
-				<precio_unitario>12.00â‚¬</precio_unitario>
+				<precio_unitario moneda="EUR">12.00</precio_unitario>
 			</producto>
 			<producto>
 				<cantidad>12</cantidad>
-				<nombre_producto>RincÃ³n de la SubbÃ©tica</nombre_producto>
+				<nombre_producto>Rincón de la Subbética</nombre_producto>
 				<cod_producto>RIN-CON-SUB</cod_producto>
-				<precio_unitario>18.95â‚¬</precio_unitario>
+				<precio_unitario moneda="EUR">18.95</precio_unitario>
 			</producto>
 			<producto>
 				<cantidad>10</cantidad>
 				<nombre_producto>La joya del Monte</nombre_producto>
 				<cod_producto>JOY-DEL-MON</cod_producto>
-				<precio_unitario>69.95â‚¬</precio_unitario>
+				<precio_unitario moneda="EUR">69.95</precio_unitario>
 			</producto>
 			<cuantia>
-				<subtotal>1286.90</subtotal>
+				<subtotal moneda="EUR">1286.90</subtotal>
 				<iva>21</iva>
-				<total>1557.15</total>
+				<total moneda="EUR">1557.15</total>
 			</cuantia>
 		</factura>
 	</cliente>
-</oleum_est_aurum>
+</clientes>
 	
 	
 

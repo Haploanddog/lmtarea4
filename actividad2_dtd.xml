@@ -1,8 +1,8 @@
 <!--Ya que necesitamos el archivo actividad2.dtd, tenemos que marcar 'no' en 'standalone'. Aunque si no lo hubiese escrito, el valor por defecto hubiera sido el mismo-->
-<?xml version="1.0" enconding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--Para enlazar con un archivo dtd externo incluiremos el nombre del archivo en el -->
-<!DOCTYPE oleum_est_aurum SYSTEM "actividad2.dtd">
-<oleum_est_aurum>
+<!DOCTYPE clientes SYSTEM "actividad2.dtd">
+<clientes>
 	<cliente>
 		<codigo_cliente>E1234</codigo_cliente>
 		<!--Ya que no importa el orden de los campos nombre_via, num_via,..., serán atributos-->
@@ -10,10 +10,10 @@
 		localidad = "Córdoba" provincia ="Córdoba" 
 		cod_postal="14003"></direccion>
 		<telefono>957520744</telefono>
-		<tipo_cliente>Empresa
+		<tipo_cliente>
 			<empresa>
-				<nombre_apellidos>Juan RamÃ­rez SÃ¡nchez</nombre_apellidos>
-				<razon_social>Restaurante Pepe de la JuderÃ­a</razon_social>
+				<nombre_apellidos>Juan Ramírez Sánchez</nombre_apellidos>
+				<razon_social>Restaurante Pepe de la Judería</razon_social>
 				<web></web>
 				<CIF>b14978647</CIF>
 			</empresa>
@@ -27,19 +27,19 @@
 				<cantidad>30</cantidad>
 				<nombre_producto>Parqueoliva Serie OrO</nombre_producto>
 				<cod_producto>PAR-SER-ORO</cod_producto>
-				<precio_unitario>12.00€</precio_unitario>
+				<precio_unitario>12.00</precio_unitario>
 			</producto>
 			<producto>
 				<cantidad>12</cantidad>
 				<nombre_producto>Rincón de la Subbética</nombre_producto>
 				<cod_producto>RIN-CON-SUB</cod_producto>
-				<precio_unitario>18.95€</precio_unitario>
+				<precio_unitario>18.95</precio_unitario>
 			</producto>
 			<producto>
 				<cantidad>10</cantidad>
 				<nombre_producto>La joya del Monte</nombre_producto>
 				<cod_producto>JOY-DEL-MON</cod_producto>
-				<precio_unitario>69.95€</precio_unitario>
+				<precio_unitario>69.95</precio_unitario>
 			</producto>
 			<cuantia>
 				<subtotal>1286.90</subtotal>
@@ -48,7 +48,7 @@
 			</cuantia>
 		</factura>
 	</cliente>
-</oleum_est_aurum>
+</clientes>
 	
 	
 
