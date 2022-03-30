@@ -1,4 +1,6 @@
+<!--Ya que necesitamos el archivo actividad2.dtd, tenemos que marcar 'no' en 'standalone'. Aunque si no lo hubiese escrito, el valor por defecto hubiera sido el mismo-->
 <?xml version="1.0" enconding="UTF-8" standalone="no"?>
+<!--Para enlazar con un archivo dtd externo incluiremos el nombre del archivo en el -->
 <!DOCTYPE oleum_est_aurum SYSTEM "actividad2.dtd">
 <oleum_est_aurum>
 	<cliente>
@@ -9,10 +11,12 @@
 		cod_postal="14003"></direccion>
 		<telefono>957520744</telefono>
 		<tipo_cliente>Empresa
-			<nombre_apellidos>Juan Ramírez Sánchez</nombre_apellidos>
-			<razon_social>Restaurante Pepe de la Judería</razon_social>
-			<web></web>
-			<CIF>b14978647</CIF>
+			<empresa>
+				<nombre_apellidos>Juan RamÃ­rez SÃ¡nchez</nombre_apellidos>
+				<razon_social>Restaurante Pepe de la JuderÃ­a</razon_social>
+				<web></web>
+				<CIF>b14978647</CIF>
+			</empresa>
 		</tipo_cliente>	
 		<factura>
 			<fecha>19/01/2022</fecha>
@@ -48,15 +52,3 @@
 	
 	
 
-- Fecha, usar el tipo de dato adecuado.
-- Nº factura. El número de la factura tiene la siguiente estructura: EMP para los clientes que son EMPRESA o PAR para los PARTICULARES, seguido de un guion, año (2 últimos números), un guion y código de cliente (4 números), por ejemplo: EMP-22-1234.
-- Forma de pago, sólo puede tomar los valores: Tarjeta, transferencia o efectivo. 
-- Fecha de vencimiento: 28 días.
-- Productos, para cada producto se guarda: 
-cantidad, nombre y código de producto, precio unitario. 
-El código del producto tiene la siguiente estructura "XYZ-XYZ-XYX", 
-por ejemplo: "FIT-FER-ABO".
-- "Cuantía" de la factura indicando el 
-subtotal, el iva aplicado y el total (cifras con dos decimales). 
-Por defecto la cuantía viene expresada en "euros", 
-pero puede tomar otros valores.
