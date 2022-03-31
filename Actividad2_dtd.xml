@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE clientes>
+	<clientes>
+	<cliente cod_cliente="E1234">
+	<direccion nombre_via="Calle Romero" num_via="1" 
+	localidad = "Córdoba" provincia ="Córdoba" 
+	cod_postal="14003"></direccion>
+	<telefono tipo_tfno="particular">957520744</telefono>
+	<tipo_cliente>
+	<empresa>
+	<nombre_apellidos>Juan Ramírez Sánchez</nombre_apellidos>
+	<razon_social>Restaurante Pepe el de la Judería</razon_social>
+	<web></web>
+	<CIF>b14978647</CIF>
+			</empresa>
+		</tipo_cliente>
+	<factura>
+	<fecha type="date">2022-01-19</fecha>
+	<num_factura>EMP-22-1234</num_factura>
+	<forma_pago>Efectivo</forma_pago>
+	<fecha_vencimiento type="dias">28</fecha_vencimiento>
+	<producto cod_producto="PAR-SER-ORO">
+	<cantidad>30</cantidad>
+	<nombre_producto>Parqueoliva Serie OrO</nombre_producto>
+	<precio_unitario moneda="EUR">12.00</precio_unitario>
+			</producto>
+	<producto cod_producto="RIN-CON-SUB">
+	<cantidad>12</cantidad>
+	<nombre_producto>Rincón de la Subbética</nombre_producto>
+	<precio_unitario moneda="EUR">18.95</precio_unitario>
+			</producto>
+	<producto cod_producto="JOY-DEL-MON">
+	<cantidad>10</cantidad>
+	<nombre_producto>La joya del Monte</nombre_producto>
+	<precio_unitario moneda="EUR">69.95</precio_unitario>
+			</producto>
+	<cuantia>
+	<subtotal moneda="EUR">1286.90</subtotal>
+	<iva>21</iva>
+	<total moneda="EUR">1557.15</total>
+			</cuantia>
+		</factura>
+	</cliente>
+</clientes>
