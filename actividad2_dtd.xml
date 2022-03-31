@@ -5,7 +5,7 @@
 		<direccion nombre_via="Calle Romero" num_via="1" 
 		localidad = "Córdoba" provincia ="Córdoba" 
 		cod_postal="14003"></direccion>
-		<telefono>957520744</telefono>
+		<telefono tipo_tfno="particular">957520744</telefono>
 		<tipo_cliente>
 			<empresa>
 				<nombre_apellidos>Juan Ramírez Sánchez</nombre_apellidos>
@@ -18,23 +18,20 @@
 			<fecha type="date">2022-01-19</fecha>
 			<num_factura>EMP-22-1234</num_factura>
 			<forma_pago>Efectivo</forma_pago>
-			<fecha_vencimiento formato="dias">28</fecha_vencimiento>
-			<producto>
+			<fecha_vencimiento type="dias">28</fecha_vencimiento>
+			<producto cod_producto="PAR-SER-ORO">
 				<cantidad>30</cantidad>
 				<nombre_producto>Parqueoliva Serie OrO</nombre_producto>
-				<cod_producto>PAR-SER-ORO</cod_producto>
 				<precio_unitario moneda="EUR">12.00</precio_unitario>
 			</producto>
-			<producto>
+			<producto cod_producto="RIN-CON-SUB">
 				<cantidad>12</cantidad>
 				<nombre_producto>Rincón de la Subbética</nombre_producto>
-				<cod_producto>RIN-CON-SUB</cod_producto>
 				<precio_unitario moneda="EUR">18.95</precio_unitario>
 			</producto>
-			<producto>
+			<producto cod_producto="JOY-DEL-MON">
 				<cantidad>10</cantidad>
 				<nombre_producto>La joya del Monte</nombre_producto>
-				<cod_producto>JOY-DEL-MON</cod_producto>
 				<precio_unitario moneda="EUR">69.95</precio_unitario>
 			</producto>
 			<cuantia>

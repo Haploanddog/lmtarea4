@@ -1,20 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!ELEMENT clientes (cliente)>
-<!ELEMENT cliente (direccion, telefono*, tipo_cliente, factura+)>
-    <!ATTLIST cliente cod_cliente ID #REQUIRED>
-<!ELEMENT direccion (#PCDATA)>
-    <!ATTLIST direccion nombre_via CDATA #REQUIRED>
-    <!ATTLIST direccion num_via CDATA #REQUIRED>
-    <!ATTLIST direccion localidad CDATA #REQUIRED>
-    <!ATTLIST direccion provincia CDATA #REQUIRED>
-    <!ATTLIST direccion cod_postal CDATA #REQUIRED>
-<!ELEMENT telefono (#PCDATA)>
-    <!ATTLIST telefono tipo_tfno (particular | direccion | rrhh | contabilidad) #REQUIRED>
-<!ELEMENT tipo_cliente (empresa(nombre_apellidos, razon_social, web?, CIF) | particular(nombre_apellidos, NIF))>
-<!ELEMENT empresa(nombre_apellidos, razon_social, web?, CIF)>
-<!ELEMENT nombre_apellidos (#PCDATA)>
-<!ELEMENT razon_social (#PCDATA)>
-<!ELEMENT web (#PCDATA)>
-<!ELEMENT CIF (#PCDATA)>
-<!ELEMENT NIF (#PCDATA)>
-<!ELEMENT factura(fecha, num_factura, forma_pago, fecha_vencimiento, producto, cuantia)>
+	<!ELEMENT cliente (direccion, telefono*, tipo_cliente, factura+)>
+	    <!ATTLIST cliente cod_cliente ID #REQUIRED>
+        <!ELEMENT direccion (#PCDATA)>
+            <!ATTLIST direccion nombre_via CDATA #REQUIRED>
+            <!ATTLIST direccion num_via CDATA #REQUIRED>
+            <!ATTLIST direccion localidad CDATA #REQUIRED>
+            <!ATTLIST direccion provincia CDATA #REQUIRED>
+            <!ATTLIST direccion cod_postal CDATA #REQUIRED>
+        <!ELEMENT telefono (#PCDATA)>
+            <!ATTLIST telefono tipo_tfno (particular | direccion | rrhh | contabilidad) #REQUIRED>
+        <!ELEMENT tipo_cliente (empresa| particular)>
+        <!ELEMENT empresa (nombre_apellidos, razon_social, web?, CIF)>
+        <!ELEMENT particular (nombre_apellidos, NIF)>
+            <!ELEMENT nombre_apellidos (#PCDATA)>
+            <!ELEMENT razon_social (#PCDATA)>
+            <!ELEMENT web (#PCDATA)>
+            <!ELEMENT CIF (#PCDATA)>
+            <!ELEMENT NIF (#PCDATA)>
+        <!ELEMENT factura (fecha, num_factura, forma_pago, fecha_vencimiento, producto*, cuantia)>
+            <!ELEMENT fecha (#PCDATA)>
+                <!ATTLIST fecha type (date|dias) #FIXED "date">
+            <!ELEMENT num_factura (#PCDATA)>
+            <!ELEMENT forma_pago (#PCDATA)>
+            <!ELEMENT fecha_vencimiento (#PCDATA)>
+                <!ATTLIST fecha_vencimiento type (date|dias) #FIXED "dias">
+            <!ELEMENT producto (cantidad, nombre_producto, precio_unitario)>
+                <!ATTLIST producto cod_producto NMTOKEN #REQUIRED>
+                <!ELEMENT cantidad (#PCDATA)>
+                <!ELEMENT nombre_producto (#PCDATA)>
+                <!ELEMENT precio_unitario (#PCDATA)>
+                    <!ATTLIST precio_unitario moneda (EUR) #FIXED "EUR">
+            <!ELEMENT cuantia (subtotal, iva, total)>
+                <!ELEMENT subtotal (#PCDATA)>
+                    <!ATTLIST subtotal moneda (EUR) #FIXED "EUR">
+                <!ELEMENT iva (#PCDATA)>
+                <!ELEMENT total (#PCDATA)>
+                    <!ATTLIST total moneda (EUR) #FIXED "EUR">
